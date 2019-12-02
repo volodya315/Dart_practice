@@ -7,9 +7,11 @@ String createPhoneNumber(List numbers) {
   }
 
   for (int i = 3; i < 10; i++) {
-    phoneNumber += numbers[i].toString();
-
-    if (i == 5) phoneNumber += "-" + numbers[i].toString();
+    if (i == 5) {
+      phoneNumber += "-" + numbers[i].toString();
+    } else {
+      phoneNumber += numbers[i].toString();
+    }
   }
   return "(" + areaCode + ")" + phoneNumber;
 }
