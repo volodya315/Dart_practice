@@ -26,20 +26,39 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return new Padding(
-      padding: const EdgeInsets.only(top: 50.0, left: 8.0),
+      padding: const EdgeInsets.only(top: 50.0, left: 8.0, right: 8.0),
       child: Column(
         children: <Widget>[
-          Text('Col. 1', textDirection: TextDirection.ltr),
-          Text('Col. 2', textDirection: TextDirection.ltr),
-          Text('Col. 3', textDirection: TextDirection.ltr),
-          Text('Col. 4', textDirection: TextDirection.ltr),
-          Row(
-            textDirection: TextDirection.ltr,
-            children: <Widget>[
-              Text('Row. 1', textDirection: TextDirection.ltr),
-              Text('Row. 2', textDirection: TextDirection.ltr),
-              Text('Row. 3', textDirection: TextDirection.ltr)
-            ],
+          Card(
+            child: Padding(
+              padding: EdgeInsets.all(24.0),
+              child: Row(
+                textDirection: TextDirection.ltr,
+                children: <Widget>[
+                  Text('Child1', textDirection: TextDirection.ltr),
+                  Text('Child2', textDirection: TextDirection.ltr),
+                  Text('Child3', textDirection: TextDirection.ltr),
+                  Text('Child4', textDirection: TextDirection.ltr)
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 8.0),
+            child: Card(
+              child: Padding(
+                padding: EdgeInsets.all(24.0),
+                child: Row(
+                  textDirection: TextDirection.ltr,
+                  children: <Widget>[
+                    Text('Child1', textDirection: TextDirection.ltr),
+                    Text('Child2', textDirection: TextDirection.ltr),
+                    Text('Child3', textDirection: TextDirection.ltr),
+                    Text('Child4', textDirection: TextDirection.ltr)
+                  ],
+                ),
+              ),
+            ),
           )
         ],
       ),
