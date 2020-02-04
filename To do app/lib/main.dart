@@ -25,19 +25,23 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(
-        color: Colors.red,
-        child: Center(
-          child: RaisedButton(
-            child: Text("Click",
-                textDirection: TextDirection.ltr,
-                style: TextStyle(fontSize: 32.0, color: Colors.black)),
-            onPressed: () {
-              print("Hi from my stateful widget");
-            },
-          ),
-        ),
+    return new Padding(
+      padding: const EdgeInsets.only(top: 50.0, left: 8.0),
+      child: Column(
+        children: <Widget>[
+          Text('Col. 1', textDirection: TextDirection.ltr),
+          Text('Col. 2', textDirection: TextDirection.ltr),
+          Text('Col. 3', textDirection: TextDirection.ltr),
+          Text('Col. 4', textDirection: TextDirection.ltr),
+          Row(
+            textDirection: TextDirection.ltr,
+            children: <Widget>[
+              Text('Row. 1', textDirection: TextDirection.ltr),
+              Text('Row. 2', textDirection: TextDirection.ltr),
+              Text('Row. 3', textDirection: TextDirection.ltr)
+            ],
+          )
+        ],
       ),
     );
   }
