@@ -35,7 +35,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               child: Row(
                 textDirection: TextDirection.ltr,
                 children: <Widget>[
-                  Text('Child1', textDirection: TextDirection.ltr),
+                  Directionality(
+                    textDirection: TextDirection.ltr,
+                    child: new IconButton(
+                      icon:
+                          Icon(Icons.person, textDirection: TextDirection.ltr),
+                      onPressed: () {
+                        print("person");
+                      },
+                    ),
+                  ),
                   Text('Child2', textDirection: TextDirection.ltr),
                   Text('Child3', textDirection: TextDirection.ltr),
                   Text('Child4', textDirection: TextDirection.ltr)
@@ -51,7 +60,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: Row(
                   textDirection: TextDirection.ltr,
                   children: <Widget>[
-                    Text('Child1', textDirection: TextDirection.ltr),
+                    Directionality(
+                      textDirection: TextDirection.ltr,
+                      child: new IconButton(
+                        icon: Icon(Icons.person,
+                            textDirection: TextDirection.ltr),
+                        onPressed: () {
+                          print("person");
+                        },
+                      ),
+                    ),
                     Text('Child2', textDirection: TextDirection.ltr),
                     Text('Child3', textDirection: TextDirection.ltr),
                     Text('Child4', textDirection: TextDirection.ltr)
